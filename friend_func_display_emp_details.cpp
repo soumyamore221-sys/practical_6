@@ -1,0 +1,72 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+class Employee {
+private:
+    int empId;
+    string name;
+    double salary;
+    string department;
+
+public:
+    void setEmployeeId(int id) {
+        empId = id;
+    }
+    
+    void setName(string n) {
+        name = n;
+    }
+    
+    void setSalary(double sal) {
+        salary = sal;
+    }
+    
+    void setDepartment(string dept) {
+        department = dept;
+    }
+    
+    
+    friend void displayEmployee(Employee e);
+};
+
+
+void displayEmployee(Employee e) {
+    cout << "\n╔════════════════════════════════════╗" << endl;
+    cout << "║        EMPLOYEE DETAILS            ║" << endl;
+    cout << "╠════════════════════════════════════╣" << endl;
+    cout << "║ Employee ID  : " << setw(21) << e.empId << " ║" << endl;
+    cout << "║ Name         : " << setw(21) << e.name << " ║" << endl;
+    cout << "║ Salary       : $" << setw(20) << fixed << setprecision(2) << e.salary << " ║" << endl;
+    cout << "║ Department   : " << setw(21) << e.department << " ║" << endl;
+    cout << "╚════════════════════════════════════╝" << endl;
+}
+
+int main() {
+    Employee emp1, emp2, emp3;
+    
+   
+    emp1.setEmployeeId(101);
+    emp1.setName("John Doe");
+    emp1.setSalary(55000.50);
+    emp1.setDepartment("IT");
+    
+    emp2.setEmployeeId(102);
+    emp2.setName("Jane Smith");
+    emp2.setSalary(62000.75);
+    emp2.setDepartment("HR");
+    
+    emp3.setEmployeeId(103);
+    emp3.setName("Bob Johnson");
+    emp3.setSalary(48000.00);
+    emp3.setDepartment("Finance");
+    
+  
+    cout << "=== EMPLOYEE DETAILS ===" << endl;
+    displayEmployee(emp1);
+    displayEmployee(emp2);
+    displayEmployee(emp3);
+    
+    return 0;
+}

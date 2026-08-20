@@ -33,14 +33,14 @@ public:
 
 
 void displayEmployee(Employee e) {
-    cout << "\n╔════════════════════════════════════╗" << endl;
-    cout << "║        EMPLOYEE DETAILS            ║" << endl;
-    cout << "╠════════════════════════════════════╣" << endl;
-    cout << "║ Employee ID  : " << setw(21) << e.empId << " ║" << endl;
-    cout << "║ Name         : " << setw(21) << e.name << " ║" << endl;
-    cout << "║ Salary       : $" << setw(20) << fixed << setprecision(2) << e.salary << " ║" << endl;
-    cout << "║ Department   : " << setw(21) << e.department << " ║" << endl;
-    cout << "╚════════════════════════════════════╝" << endl;
+    
+    cout << "    EMPLOYEE DETAILS           " << endl;
+
+    cout << "Employee ID  : " << setw(21) << e.empId << endl;
+    cout << "Name         : " << setw(21) << e.name << endl;
+    cout << "Salary       : $" << setw(20) << fixed << setprecision(2) << e.salary << endl;
+    cout << "Department   : " << setw(21) << e.department << endl;
+    
 }
 
 int main() {
@@ -54,7 +54,7 @@ int main() {
     
   
   
-    cout << "=== EMPLOYEE DETAILS ===" << endl;
+   
     displayEmployee(emp1);
   
     return 0;
